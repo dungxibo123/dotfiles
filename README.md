@@ -18,12 +18,25 @@
 
 
 ```bash
+
+#Note: below content is the basic-setup.sh file
+#@author: Dung T. Vo
+#@time: 01/03/2022
+
+
 # Use as root
 su
 #Type password in
 
+# install the git and the fakeroot enviroment
+pacman -S --needed git base-devel
+
 # Clone the yay repository and install yay packages manager
+# git clone https://aur.archlinux.org/yay-bin.git
+cd /opt
 git clone https://aur.archlinux.org/yay-git.git
+chown -R <YOUR_USER_NAME_HERE>:<YOUR_USER_NAME_HERE> ./yay-git
+
 cd yay-git
 makepkg -si
 
@@ -31,6 +44,5 @@ makepkg -si
 yay -Sy
 yay -Syy
 
-# Install all the packages in usePackages.txt
-yay -S - > usePackages.txt
+yay -S $(awk '{print $1}'  usePackages.txt)
 ```
