@@ -18,6 +18,12 @@
 
 
 ```bash
+
+#Note: below content is the basic-setup.sh file
+#@author: Dung T. Vo
+#@time: 01/03/2022
+
+
 # Use as root
 su
 #Type password in
