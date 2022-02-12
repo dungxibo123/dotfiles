@@ -1,9 +1,9 @@
-sw_volume: 18
+sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:Visualizer feed
 state: play
-current: 2
-time: 179.289000
+current: 7
+time: 56.630000
 random: 0
 repeat: 1
 single: 1
@@ -23,4 +23,5 @@ playlist_begin
 8:y2mate.com - Lukas Graham  Happy For You feat Vũ Performance Video.mp3
 9:y2mate.com - Một Bước Yêu Vạn Dặm Đau  Mr Siro  Bun  Orin Cover.mp3
 10:y2mate.com - NÀNG THƠ  Acoustic ver   Bun  Orin Cover.mp3
+11:y2mate.com - Jack  Hoa Hải Đường  Official Music Video.mp3
 playlist_end

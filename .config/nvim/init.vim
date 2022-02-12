@@ -477,7 +477,13 @@ autocmd InsertLeave * set nocursorline
 "set cursorline
 "set noshowmode
 "set nocursorline
-
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 
 
