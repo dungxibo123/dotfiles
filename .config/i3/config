@@ -40,7 +40,7 @@ bindsym $mod+Return 																					exec alacritty --working-directory $(xc
 #bindsym $mod+Return exec urxvt -e "cd $(xcwd)"
 #bindsym $mod+Return exec "st -e ST_PATH='$(xcwd)'"
 
-bindsym Control+Shift+y 																			exec workspace $ws1 & brave google.com
+bindsym Control+Shift+y 																			exec workspace $ws1 & microsoft-edge-stable google.com
 bindsym Control+Shift+a 																			exec workspace $ws2 & alacritty --working-directory $(xcwd) --command nvim 
 # Kill focused window with Alt+Q
 bindsym Mod1+q 																								kill
@@ -144,6 +144,7 @@ bindsym $mod+Shift+0 																					move container to workspace $ws10
 assign [class="Thunderbird"] $ws10
 assign [class="brave"] $ws1
 assign [class="firefox"] $ws1
+assign [class="microsoft-edge-stable"] $ws1
 
 assign [class="Brave"] $ws1
 assign [class="subl"] $ws2
@@ -158,6 +159,7 @@ assign [title="WPS PDF$"] $ws3
 assign [title="Foxit Reader$"] $ws3
 assign [title="Discord$"] $ws4
 assign [title="Notion Desktop"] $ws8
+assign [title="Edge$"] $ws1
 
 
 # Default workspace layout  
