@@ -15,9 +15,9 @@ export imgs_path="${str[$imgs_num]}"
 
 if [[ $time -ge 6 && $time -lt 17  ]]; 
 then
-	brightness=80%
+	brightness=100%
 else
-	brightness=40%
+	brightness=100%
 fi
 echo $imgs_path
 feh --bg-fill ${imgs_path}
