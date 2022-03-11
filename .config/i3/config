@@ -35,7 +35,7 @@ bindsym XF86AudioMicMute                                      exec --no-startup-
 
 # Start terminal
 #bindsym $mod+Return exec call_new_terminal
-bindsym $mod+Return 																					exec alacritty --working-directory $(xcwd)
+bindsym $mod+Return 																					exec alacritty --working-directory "$(xcwd)"
 #~/.cache/wal/colors.sh
 #bindsym $mod+Return exec urxvt -e "cd $(xcwd)"
 #bindsym $mod+Return exec "st -e ST_PATH='$(xcwd)'"
