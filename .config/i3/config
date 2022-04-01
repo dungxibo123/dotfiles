@@ -161,6 +161,8 @@ assign [title="Discord$"] $ws4
 assign [title="Notion Desktop"] $ws8
 assign [title="Edge$"] $ws1
 assign [title="alacritty"] $ws2
+assign [class="zathura"] $ws3
+assign [class="zathura"] $ws3
 
 
 # Default workspace layout  

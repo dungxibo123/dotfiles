@@ -1,18 +1,11 @@
 set runtimepath+=~/.config/nvim/
-
 set nu
 set relativenumber
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 set showcmd
 set showmatch
 set encoding=utf-8
-set encoding=UTF-8
 set hlsearch
-set smartindent
-set autoindent
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set inde
 set paste
 
@@ -22,6 +15,32 @@ set wrap
 set showmode
 set clipboard=unnamedplus
 set noignorecase
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=100
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
 "source ~/.vim/autoload/vim-prettier/plugin/prettier.vim
 "source ~/.vim/closetag.vim/plugin/closetag.vim
 "execute pathogen#infect()
@@ -32,12 +51,10 @@ call plug#begin('~/.config/nvim/autoload')
 
 Plug 'Chiel92/vim-autoformat'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'valloric/youcompleteme'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dense-analysis/ale'
 Plug 'jcherven/jummidark.vim'
 Plug 'tpope/vim-commentary'
-" Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/matchtag'
 Plug 'vim-airline/vim-airline'
@@ -47,7 +64,6 @@ Plug 'nvie/vim-flake8'
 
 
 Plug 'ryanoasis/vim-devicons'
-" On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
@@ -79,19 +95,12 @@ Plug '~/my-prototype-Plug'
 "Auto complete HTML Tags
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" alternatively, pass a path where vundle should install Plugs
-"call vundle#begin('~/some/path/here')
 Plug 'alvan/vim-closetag'
-" let vundle manage vundle, required
 Plug 'vundlevim/vundle.vim'
 
 Plug 'tpope/vim-fugitive'
 
-" Plug 'sts10/vim-pink-moon'
-
-"Color
 Plug 'arcticicestudio/nord-vim'
-" Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 
@@ -142,49 +151,7 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
-
-
-
-
-
-
-
-
-
-
 filetype plugin indent on
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let g:mta_use_matchparen_group = 1
 let g:mta_filetypes = {'html': 1,'xhtml': 1,'xml' : 1,'js': 1,'jsx': 1}
@@ -197,32 +164,6 @@ let g:prettier#autoformat_require_pragma = 0
 
 
 
-
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
