@@ -22,5 +22,5 @@ fi
 echo $imgs_path
 feh --bg-fill ${imgs_path}
 brightnessctl s $brightness
-source ~/.config/polybar/cuts/scripts/pywal.sh $imgs_path
+source ~/.config/polybar/shades/scripts/pywal.sh $imgs_path
 picom --config ~/.config/picom/picom.conf

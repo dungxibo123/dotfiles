@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 dir="$HOME/.config/polybar"
 themes=(`ls --hide="launch.sh" $dir`)
 
@@ -11,16 +12,12 @@ launch_bar() {
 
 	# Launch the bar
 	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
-		if type "xrandr"; then
-			for m in $(xrandr -q | grep " connected" | cut -d " " -f1); do
-					MONITOR=$m polybar --reload top -c "$dir/$style/config.ini" &
-					MONITOR=$m polybar --reload bottom -c "$dir/$style/config.ini" &
-			done
-		fi
+		polybar -q top -c "$dir/$style/config.ini" &
+		polybar -q bottom -c "$dir/$style/config.ini" &
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main
 	else
-		polybar -q main -c "$dir/$style/config.ini" &
+		polybar -q main -c "$dir/$style/config.ini" &	
 	fi
 }
 
@@ -64,21 +61,13 @@ elif [[ "$1" == "--forest" ]]; then
 	style="forest"
 	launch_bar
 
-elif [[ "$1" == "--pwidgets" ]]; then
-	style="pwidgets"
-	launch_bar
-
-elif [[ "$1" == "--panels" ]]; then
-	style="panels"
-	launch_bar
-
 else
 	cat <<- EOF
 	Usage : launch.sh --theme
-
+		
 	Available Themes :
 	--blocks    --colorblocks    --cuts      --docky
 	--forest    --grayblocks     --hack      --material
-	--panels    --pwidgets       --shades    --shapes
+	--shades    --shapes
 	EOF
 fi

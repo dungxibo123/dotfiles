@@ -357,7 +357,7 @@ exec --no-startup-id lxsession
 
 
 #DMenu run by polybar-themes
-set $applauncher sh ~/.config/polybar/cuts/scripts/launcher.sh
+set $applauncher sh ~/.config/polybar/shades/scripts/launcher.sh
 bindsym $mod+d exec $applauncher
 #bindsym Super exec $applauncher
 
@@ -366,6 +366,6 @@ exec xset r rate 200 80
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 #for_window [class=".*"] border pixel 0
-exec_always --no-startup-id ~/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id ~/.config/polybar/launch.sh --shades
 
 exec --no-startup-id i3-msg "workspace Browser"
