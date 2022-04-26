@@ -1,5 +1,5 @@
 window:
-  opacity: 0.79
+  opacity: 0.75
 # Colors (Monokai Pro)
 colors:
   # Default colors
@@ -32,7 +32,7 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Consolas
+    family: monospace
     style: normal
     #family: "Fira Code"
     #family: "Consolas"
@@ -41,14 +41,14 @@ font:
 
   # The bold font face
   bold:
-    family: Consolas
+    family: monospace
     style: Bold
     #family: "Fira Code"
     #family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: Consolas
+    family: monospace
     #style: "Light Italic"
     style: "Light Oblique"
     # family: "Fira Code"
@@ -56,7 +56,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 12.5
+  size: 10
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
