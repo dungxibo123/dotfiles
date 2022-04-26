@@ -427,7 +427,6 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 
-
 " trasparent end
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " set background=dark
@@ -445,3 +444,9 @@ if (has("termguicolors"))
 endif
 colorscheme nord
 let g:palenight_terminal_italics=1
+
+
+
+
+let g:copilot_assume_mapped = v:true
+let g:copilot_assume_mapped = v:true

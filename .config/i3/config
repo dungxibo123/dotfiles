@@ -348,13 +348,12 @@ exec --no-startup-id $background
 #exec "QT_IM_MODULE=ibus telegram-desktop" 
 # exec --no-startup-id blueman-applet
 # exec --no-startup-id nm-applet
-exec --no-startup-id calibre
 exec --no-startup-id notion-app
 exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id lxsession
 # DMENU
 #bindsym $mod+d exec dmenu_run 
-bindsym Super exec dmenu_run
+#bindsym Super exec dmenu_run
 
 
 #DMenu run by polybar-themes
