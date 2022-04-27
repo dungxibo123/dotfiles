@@ -1,0 +1,13 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda3
+UUID=59dc2ee8-f1db-44d1-8a99-956439c4d826	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda2
+UUID=6693c480-5d17-4516-9bcf-49371d672eea	none      	swap      	defaults  	0 0
+
+# Linux file system
+
+UUID=3beff01b-4cb4-4015-b203-fe9bfd8975b4       /run/media/dungvt/Coding ext4   defaults        0 0
