@@ -1,6 +1,0 @@
-2022/07/11-09:23:08.562 1491 Creating DB /home/dungvt/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb since it was missing.
-2022/07/11-09:23:08.574 1491 Reusing MANIFEST /home/dungvt/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/07/11-10:53:01.748 a02e Level-0 table #5: started
-2022/07/11-10:53:01.756 a02e Level-0 table #5: 582451 bytes OK
-2022/07/11-10:53:01.758 a02e Delete type=0 #3
-2022/07/11-10:53:01.758 a02e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
