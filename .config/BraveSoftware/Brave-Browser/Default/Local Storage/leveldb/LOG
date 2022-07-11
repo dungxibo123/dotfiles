@@ -1,0 +1,12 @@
+2022/07/11-09:14:14.937 3 Reusing MANIFEST /home/dungvt/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001
+2022/07/11-09:14:14.938 3 Recovering log #27
+2022/07/11-09:14:14.940 3 Reusing old log /home/dungvt/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000027.log 
+2022/07/11-09:20:33.407 3 Level-0 table #32: started
+2022/07/11-09:20:33.409 3 Level-0 table #32: 11731 bytes OK
+2022/07/11-09:20:33.411 3 Delete type=0 #27
+2022/07/11-09:21:13.045 3 Level-0 table #34: started
+2022/07/11-09:21:13.056 3 Level-0 table #34: 103837 bytes OK
+2022/07/11-09:21:13.059 3 Delete type=0 #31
+2022/07/11-10:52:32.943 2f Level-0 table #36: started
+2022/07/11-10:52:32.945 2f Level-0 table #36: 24049 bytes OK
+2022/07/11-10:52:32.948 2f Delete type=0 #33
