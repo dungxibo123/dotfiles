@@ -1,0 +1,33 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font.glyph_offset]
+x = 0
+y = 1
+
+
+[font]
+size = 10
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.italic]
+family = "monospace"
+style = "Light Oblique"
+
+[font.normal]
+family = "monospace"
+style = "normal"
+
+[font.offset]
+x = 0
+y = 3
+
+[window]
+opacity = 0.9
+
+
+[terminal.shell]
+program = "/usr/bin/zsh"

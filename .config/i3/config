@@ -40,7 +40,7 @@ bindsym $mod+Return 																					exec alacritty --working-directory "$(x
 #bindsym $mod+Return exec urxvt -e "cd $(xcwd)"
 #bindsym $mod+Return exec "st -e ST_PATH='$(xcwd)'"
 
-bindsym Control+Shift+y 																			exec workspace $ws1 & brave google.com
+bindsym Control+Shift+y 																			exec workspace $ws1 & zen-browser google.com
 bindsym Control+Shift+a 																			exec workspace $ws2 & alacritty --working-directory $(xcwd) --command nvim 
 # Kill focused window with Alt+Q
 bindsym Mod1+q 																								kill
@@ -142,26 +142,21 @@ bindsym $mod+Shift+0 																					move container to workspace $ws10
 
 # Assign applications in workspace
 assign [class="Thunderbird"] $ws10
-assign [class="brave"] $ws1
 assign [class="firefox"] $ws1
+assign [class="zen-alpha"] $ws1
+assign [class="zen"] $ws1
 assign [class="microsoft-edge-stable"] $ws1
 
 assign [class="Brave"] $ws1
 assign [class="subl"] $ws2
 assign [class="vim"] $ws2
+assign [class="nvim"] $ws2
 assign [class="TelegramDesktop"] $w8
 assign [class="zoom"] $ws4
-assign [class="wpspdf"] $ws6
 assign [class="calibre"] $ws5
-assign [title="Google Chrome$"] $ws10
-assign [title="Microsoft Teams$"] $ws4
-assign [title="WPS PDF$"] $ws3
-assign [title="Foxit Reader$"] $ws3
 assign [title="Discord$"] $ws4
 assign [title="Notion Desktop"] $ws8
-assign [title="Edge$"] $ws1
 assign [title="alacritty"] $ws2
-assign [class="zathura"] $ws3
 assign [class="zathura"] $ws3
 
 
@@ -361,11 +356,11 @@ set $applauncher sh ~/.config/polybar/shades/scripts/launcher.sh
 bindsym $mod+d exec $applauncher
 #bindsym Super exec $applauncher
 
-exec xset r rate 200 80
+exec xset r rate 200 20
 #move workspace to output
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 #for_window [class=".*"] border pixel 0
-exec_always --no-startup-id ~/.config/polybar/launch.sh --shades
+exec_always --no-startup-id ~/.config/polybar/shades/launch.sh 
 
 exec --no-startup-id i3-msg "workspace Browser"
