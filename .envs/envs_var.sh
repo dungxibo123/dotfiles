@@ -10,7 +10,5 @@ export PATH="${PATH}:${LD_LIBRARY_PATH}:/opt/cuda/bin:$HOME/.local/bin:$HOME/.bi
 export EDITOR=/usr/bin/nvim
 export LC_ALL=en_US.UTF-8
 
-
-
-
-
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=100000
