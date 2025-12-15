@@ -1,0 +1,30 @@
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[font.glyph_offset]
+x = 0
+y = 1
+
+
+[font]
+size = 9
+
+[font.bold]
+family = "Inconsolata"
+
+[font.italic]
+family = "Inconsolata"
+
+[font.normal]
+family = "Inconsolata"
+
+[font.offset]
+x = 0
+y = 2
+
+[window]
+opacity = 0.9
+
+
+[terminal.shell]
+program = "/usr/bin/zsh"

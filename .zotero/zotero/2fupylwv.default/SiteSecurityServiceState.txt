@@ -1,0 +1,6 @@
+api.zotero.org:HSTS	4	20424	1796239537855,1,1
+arxiv.org:HSTS	0	20424	1796239555071,1,0
+repo.zotero.org:HSTS	4	20424	1796239538518,1,1
+arxiv.org^partitionKey=%28http%2Carxiv.org%29:HSTS	0	20424	1796239550730,1,0
+www.zotero.org:HSTS	3	20424	1796239561740,1,1
+export.arxiv.org:HSTS	0	20424	1764703849488,1,0
