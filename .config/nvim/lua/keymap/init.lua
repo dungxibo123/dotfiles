@@ -1,3 +1,4 @@
 -- require("keymap/cockey")
 require("keymap/nerdtree")
 require("keymap/personalkey")
+require("keymap/copilot")

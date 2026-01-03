@@ -7,6 +7,8 @@ vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 
 vim.keymap.set('n', 'e', 'A') -- From normal mode, go to  end of the line and insert mode
 vim.keymap.set('n', 's', 'I') -- From normal mode, go to start of the line and insert mode<D-F10><D-F10><D-F10><D-F10><D-F10><F34><F34><F34><F34><F34>≤ åååååååå∆∆∆∆˚˚˚˚˚˚
+vim.keymap.set('v', 'e', 'g_') -- From visual mode 
+vim.keymap.set('v', 's', '[[') -- From visual mode 
 vim.keymap.set('n', '<C-a>', 'ggVG') -- Choose all content
 
 

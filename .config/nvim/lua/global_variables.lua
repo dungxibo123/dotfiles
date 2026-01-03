@@ -18,3 +18,7 @@ vim.g.closetag_emptyTags_caseSensitive = 1
 
 vim.g.closetag_shortcut = '>'
 vim.g.closetag_close_shortcut = '<leader>>'
+
+
+vim.api.nvim_set_hl(0, 'CopilotChatHeader', { fg = '#7C3AED', bold = true })
+vim.api.nvim_set_hl(0, 'CopilotChatSeparator', { fg = '#374151' })
