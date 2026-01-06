@@ -2,3 +2,4 @@
 require("keymap/nerdtree")
 require("keymap/personalkey")
 require("keymap/copilot")
+require("keymap/floaterm")
