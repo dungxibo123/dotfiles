@@ -28,7 +28,7 @@ end
 -- no select by setting `"suggest.noselect": true` in your configuration file
 -- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
 -- other plugins before putting this into your config
-local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+local opts = {silent = true, noremap = true, expr = true, replace_keycodes = true}
 keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
@@ -188,3 +188,15 @@ keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
 keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+
+
+vim.keymap.set('i', '<TAB>', function()
+  if vim.fn.pumvisible() == 1 then
+    return vim.fn['coc#_select_confirm']()
+  else
+    return '<C-g>u<Tab>'
+  end
+end, { expr = true, silent = true })
+
+vim.keymap.set('i', '<CR>', '<C-g>u<CR>', { expr = true, silent = true })
+

@@ -11,6 +11,7 @@ vim.g['prettier#autoformat_require_pragma'] = 0
 vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml'
 vim.g.closetag_xhtml_filenames = '*.xhtml,*.jsx'
 vim.g.closetag_filetypes = 'html,xhtml,phtml'
+vim.opt.clipboard = "unnamedplus"
 
 vim.g.closetag_emptyTags_caseSensitive = 1
 
@@ -18,3 +19,7 @@ vim.g.closetag_emptyTags_caseSensitive = 1
 
 vim.g.closetag_shortcut = '>'
 vim.g.closetag_close_shortcut = '<leader>>'
+
+
+vim.api.nvim_set_hl(0, 'CopilotChatHeader', { fg = '#7C3AED', bold = true })
+vim.api.nvim_set_hl(0, 'CopilotChatSeparator', { fg = '#374151' })

@@ -1,3 +1,3 @@
 return {
- {'alvan/vim-closetag', lazy=false}
+  {'alvan/vim-closetag', lazy=false}
 }

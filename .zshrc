@@ -46,6 +46,14 @@ source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 (cat ~/.cache/wal/sequences)
 
 #  eval "$(rbenv init - zsh)"
+#
+#
+# Setting the ZSH 
+
+bindkey '^H' backward-word
+bindkey '^L' forward-word
+bindkey '^W' kill-word
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -64,7 +72,7 @@ unset __conda_setup
 #
 
 eval "$(starship init zsh)"
-
+source <(fzf --zsh)
 
 # syntax color definition
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
