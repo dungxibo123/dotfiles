@@ -11,7 +11,7 @@ set $orange                                                                     
 set $red                                                                        #cc241d
 #[class="urxvt" title="VIM"]
 # No title
-new_window none
+# new_window none
 #jjjjjjj
 #hide_edge_borders both
 #default_border none
@@ -24,12 +24,13 @@ focus_follows_mouse no
 set                                                                             $mod Mod1
 font pango:Noto Sans, Font Awesome 5 Free 9
 font pango:SomeFont 0
-floating_modifier                                                               $mod
+
+#floating_modifier                                                               $mod
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume 																	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% 
-bindsym XF86AudioLowerVolume 																	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% 
-bindsym XF86AudioMute 																      	exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
+bindsym XF86AudioRaiseVolume 																	exec --no-startup-id $HOME/.scripts/increase_volume.sh
+bindsym XF86AudioLowerVolume 																	exec --no-startup-id $HOME/.scripts/decrease_volume.sh 
+bindsym XF86AudioMute 																      	exec --no-startup-id pactl set-sink-mute ${pactl list sinks short | grep RUNNING | awk '{print $2}'} toggle 
 bindsym XF86AudioMicMute                                      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 
@@ -179,8 +180,8 @@ bindsym --release $mod+Shift+Escape 															exec systemctl reboot
 bindsym --release $mod+Escape 																		exec systemctl poweroff
 
 # Lock
-exec --no-startup-id xss-lock --transfer-sleep-lock -- slock 
-# exec betterlockscreen -u ~/Pictures/gruvbox_wp.png
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- slock 
+bindsym $mod+Shift+q exec betterlockscreen -l dim
 
 # Reload the configuration file
 bindsym $mod+Shift+c 																							reload
@@ -296,7 +297,7 @@ client.background       $bg
 #client.focused          $green   $dark       $lighter   $yellow    $green
 #client.unfocused        $dark    $dark       $lighter   $yellow    $dark 
 #client.focused_inactive $dark    $dark       $lighter   $yellow    $dark 
-#client.urgent           $yellow  $yellow     $lighter   $green     $yellow
+#cknn:client.urgent           $yellow  $yellow     $lighter   $green     $yellow
 
 #client.background       #ffffff
 
@@ -304,8 +305,8 @@ client.background       $bg
 #increase and decrease brightness of window
 set $brightnessup sh ~/.scripts/brightness_up.sh
 set $brightnessdown sh ~/.scripts/brightness_down.sh
-bindsym $mod+b+Up exec --no-startup-id $brightnessup
-bindsym $mod+b+Down exec --no-startup-id $brightnessdown
+bindsym XF86MonBrightnessUp exec --no-startup-id $brightnessup
+bindsym XF86MonBrightnessDown exec --no-startup-id $brightnessdown
 
 # Switch workspace with n and p
 bindsym $mod+n workspace prev
@@ -335,7 +336,7 @@ exec --no-startup-id $background
 
 # Auto start
 
-#exec $(cat ~/.screenlayout/layout.sh)
+exec $(cat ~/.screenlayout/layout.sh)
 #move container to workspace $ws10
 #move container to workspace $1
 
@@ -356,7 +357,7 @@ set $applauncher sh ~/.config/polybar/shades/scripts/launcher.sh
 bindsym $mod+d exec $applauncher
 #bindsym Super exec $applauncher
 
-exec xset r rate 200 20
+exec xset r rate 200 80
 #move workspace to output
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left

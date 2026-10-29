@@ -1,1 +1,1 @@
-brightnessctl s +1%
+brightnessctl s +10%

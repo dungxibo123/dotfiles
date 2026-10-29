@@ -3,14 +3,18 @@ import datetime
 #import api
 
 API_KEY="31584b1d32ccd495ad40ce91ca0978da"
-CITY_ID="1566083"
+GEO = {
+        "Detroit": {"lat": 42.335242, "lon": -83.054855},
+        "HoChiMinh": {"lat": 10.8231, "lon": 106.6297}
+}
+current_city = "Detroit"
 UNIT_KEY="Metric"
-url=f"http://api.openweathermap.org/data/2.5/weather?id={CITY_ID}&appid={API_KEY}&units={UNIT_KEY}"
+url=f"http://api.openweathermap.org/data/2.5/weather?lat={GEO[current_city]['lat']}&lon={GEO[current_city]['lon']}&appid={API_KEY}&units={UNIT_KEY}"
 if API_KEY is None:
     print("Invalid API keys")
     exit()
-try:
 
+try:
     res = requests.get(url).json()
     icloud=""
     ihumidity=""
@@ -26,9 +30,10 @@ try:
     else:
         which = ''
     sys_res=f"{which} {main_weather} {itemp}: {temp}°C  {icloud}: {cloud}%  {ihumidity}: {humidity}%"
-except:
+except Exception as e:
     print("Connect to a network!")
-    exit()    
+    sys_res = ""
+    
 
 
 

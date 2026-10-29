@@ -1,2 +1,2 @@
-brightnessctl s 5%-
+brightnessctl s 10%-
 

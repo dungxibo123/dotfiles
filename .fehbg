@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/dungvo/.scripts/bg/1655200116.png' 
